@@ -1,0 +1,18 @@
+/* Delhuan Dairy products page styles */
+#filter-bar { position: sticky; top: 72px; z-index: 40; background: rgba(253,248,240,.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(26,92,56,.08); }
+.filter-wrap { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: .625rem; padding: .75rem 0; scrollbar-width: none; }
+.filter-wrap::-webkit-scrollbar { display: none; }
+.filter-btn { font-family: var(--f-accent); font-weight: 600; font-size: .8125rem; padding: .45rem 1rem; border-radius: var(--r-full); border: 2px solid #e5e7eb; background: transparent; color: var(--c-muted); cursor: pointer; white-space: nowrap; flex-shrink: 0; }
+.filter-btn.active, .filter-btn:hover { background: var(--c-primary); color: #fff; border-color: var(--c-primary); }
+.products-grid { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+.prod-img-wrap { overflow: hidden; height: 210px; }
+.prod-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.prod-card:hover .prod-img-wrap img { transform: scale(1.07); }
+.prod-fallback { height: 210px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .5rem; background: linear-gradient(135deg,#e8f5e9,#c8e6c9); color: var(--c-primary); }
+.prod-nutrition { display: grid; grid-template-columns: repeat(3,1fr); gap: .5rem; background: #f9fafb; border-radius: 12px; padding: .75rem; margin-bottom: 1rem; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 20px; }
+.table-scroll table { min-width: 420px; width: 100%; font-size: .875rem; border-collapse: collapse; }
+.steps-grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 560px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 640px) { .steps-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 900px) { .products-grid { grid-template-columns: repeat(3, 1fr); } }

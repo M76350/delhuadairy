@@ -1,0 +1,34 @@
+/* Delhuan Dairy blog pages */
+.blog-hero { background: linear-gradient(135deg, #0f3d25, #1a5c38 58%, #c47b19); padding: 8rem 0 4rem; color: #fff; }
+.blog-hero h1 { font-family: var(--f-head); font-size: clamp(2.1rem, 5vw, 4rem); line-height: 1.12; max-width: 760px; }
+.blog-hero p { max-width: 680px; margin-top: 1rem; color: rgba(255,255,255,.82); font-size: 1.05rem; line-height: 1.8; }
+.blog-grid { display: grid; grid-template-columns: 1fr; gap: 1.25rem; }
+@media (min-width: 680px) { .blog-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; } }
+@media (min-width: 1040px) { .blog-grid { grid-template-columns: repeat(3, 1fr); } }
+.blog-card { display: flex; flex-direction: column; background: #fff; border: 1px solid #ece8df; border-radius: 14px; padding: 1.4rem; min-height: 260px; box-shadow: 0 5px 18px rgba(25, 60, 38, .06); transition: transform .25s ease, box-shadow .25s ease; }
+.blog-card-image { width: calc(100% + 2.8rem); height: 150px; margin: -1.4rem -1.4rem 1.15rem; object-fit: cover; display: block; }
+.blog-card:hover { transform: translateY(-5px); box-shadow: 0 14px 30px rgba(25, 60, 38, .13); }
+.blog-card-meta { display: flex; align-items: center; justify-content: space-between; gap: .75rem; color: #b06b16; font: 700 .72rem var(--f-accent); letter-spacing: .05em; text-transform: uppercase; }
+.blog-card h2 { margin: .8rem 0 .55rem; color: #17251c; font: 700 1.28rem/1.3 var(--f-head); }
+.blog-card p { color: #5d6a61; font-size: .92rem; line-height: 1.65; }
+.blog-card-link { margin-top: auto; padding-top: 1rem; color: var(--c-primary); font: 700 .85rem var(--f-accent); }
+.blog-card-link i { margin-left: .3rem; transition: margin-left .2s ease; }
+.blog-card:hover .blog-card-link i { margin-left: .55rem; }
+.blog-filter-note { margin: 0 auto 2rem; max-width: 720px; text-align: center; color: #6b7280; line-height: 1.7; }
+.article-wrap { max-width: 860px; margin: 0 auto; }
+.article-header { border-bottom: 1px solid #e7e2d8; margin-bottom: 2rem; padding-bottom: 1.5rem; }
+.article-kicker { color: #b06b16; font: 700 .76rem var(--f-accent); letter-spacing: .1em; text-transform: uppercase; }
+.article-header h1 { margin: .65rem 0 .8rem; color: #17251c; font: 700 clamp(2rem, 4.5vw, 3.45rem)/1.12 var(--f-head); }
+.article-header p { color: #647067; font-size: 1.05rem; line-height: 1.75; }
+.article-featured { margin: 0 0 2rem; overflow: hidden; border-radius: 14px; background: #e8f0e9; box-shadow: 0 12px 30px rgba(25, 60, 38, .12); }
+.article-featured img { width: 100%; aspect-ratio: 16 / 7; object-fit: cover; display: block; }
+.article-featured figcaption { padding: .65rem 1rem; color: #607067; font: 600 .75rem var(--f-accent); letter-spacing: .04em; }
+.article-body { color: #37443b; font-size: 1.03rem; line-height: 1.85; }
+.article-body h2 { color: var(--c-primary-dk); font: 700 1.65rem/1.3 var(--f-head); margin: 2.2rem 0 .75rem; }
+.article-body h3 { color: var(--c-primary); font: 700 1.2rem/1.4 var(--f-head); margin: 1.5rem 0 .45rem; }
+.article-body p { margin: 0 0 1rem; }
+.article-body ul, .article-body ol { margin: .5rem 0 1.3rem 1.25rem; }
+.article-body li { margin: .35rem 0; }
+.article-callout { background: #fdf8f0; border-left: 4px solid #f5a623; margin: 1.5rem 0; padding: 1rem 1.2rem; }
+.article-back { margin-top: 2.5rem; }
+@media (max-width: 520px) { .blog-hero { padding: 7rem 0 3rem; } .blog-card { min-height: 0; } .blog-card-image { height: 165px; } .article-body { font-size: .98rem; } .article-featured img { aspect-ratio: 4 / 3; } }

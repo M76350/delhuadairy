@@ -1,0 +1,26 @@
+/* Delhuan Dairy home page styles */
+#navbar { background: transparent; }
+
+.hero-section { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background: #0f3d25 center/cover no-repeat; animation: homeHeroZoom 14s ease-in-out infinite alternate; z-index: 0; }
+.hero-overlay { position: absolute; inset: 0; z-index: 1; background: linear-gradient(135deg, rgba(10,36,22,.9) 0%, rgba(26,92,56,.72) 50%, rgba(0,0,0,.25) 100%); }
+.hero-content { position: relative; z-index: 2; width: 100%; padding: 5rem 0 3rem; }
+.hero-h1 { font-family: var(--f-head); font-weight: 800; font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1.1; color: #fff; margin-bottom: 1.25rem; }
+.hero-sub { font-family: var(--f-accent); font-weight: 300; font-size: clamp(.9375rem, 2.2vw, 1.1875rem); color: rgba(255,255,255,.85); max-width: 38rem; line-height: 1.7; margin-bottom: 2rem; }
+.hero-btns { display: flex; flex-wrap: wrap; gap: .875rem; }
+.hero-trust { display: flex; flex-wrap: wrap; gap: .625rem 1.5rem; margin-top: 2rem; }
+.trust-item { display: flex; align-items: center; gap: .4rem; color: rgba(255,255,255,.82); font-family: var(--f-accent); font-size: .8125rem; }
+.trust-item .tick { color: #4ade80; font-size: 1rem; }
+.stats-section { background: linear-gradient(135deg, #0f3d25 0%, #1a5c38 60%, #2d8653 100%); }
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+.stat-card { text-align: center; padding: 2rem 1rem; border-right: 1px solid rgba(255,255,255,.1); }
+.stat-card:last-child, .stat-card:nth-child(2n) { border-right: none; }
+.stat-num { font-family: var(--f-head); font-weight: 800; font-size: clamp(2rem,5vw,3.25rem); color: #fff; line-height: 1; margin-bottom: .2rem; }
+.stat-num .sfx { font-size: .65em; color: var(--c-secondary); }
+.stat-lbl { font-family: var(--f-accent); font-size: .875rem; color: rgba(255,255,255,.72); font-weight: 500; }
+.home-products-grid { display: grid; grid-template-columns: 1fr; gap: 1.625rem; }
+.prod-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+@keyframes homeHeroZoom { from { transform: scale(1.04); } to { transform: scale(1.12); } }
+@media (min-width: 560px) { .home-products-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } .stat-card { border-right: 1px solid rgba(255,255,255,.1); } .stat-card:last-child { border-right: none; } }
+@media (prefers-reduced-motion: reduce) { .hero-bg { animation: none; } }

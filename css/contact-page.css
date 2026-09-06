@@ -1,0 +1,13 @@
+/* Delhuan Dairy contact page styles */
+.contact-wrap { display: grid; grid-template-columns: 1fr; background: var(--c-cream); }
+.contact-info-panel { background: linear-gradient(160deg,#071c10 0%,#0f3d25 55%,#1a5c38 100%); position: relative; overflow: hidden; padding: 3rem 1.75rem 3.5rem; }
+.contact-info-panel::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 10% 90%,rgba(245,166,35,.1),transparent 55%), radial-gradient(ellipse 50% 40% at 90% 10%,rgba(255,255,255,.05),transparent 50%); pointer-events: none; }
+.cinfo-card { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 1.125rem 1.25rem; display: flex; align-items: center; gap: 1rem; transition: background .25s ease, transform .25s ease; }
+.cinfo-card:hover { background: rgba(255,255,255,.12); transform: translateY(-2px); }
+.cinfo-icon { width: 46px; height: 46px; border-radius: 13px; background: rgba(245,166,35,.2); color: var(--c-secondary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-form-panel { background: var(--c-cream); padding: 3rem 1.75rem 3.5rem; display: flex; flex-direction: column; justify-content: center; }
+.form-group { margin-bottom: 1.25rem; }
+.form-label { display: block; font-family: var(--f-accent); font-weight: 600; font-size: .875rem; color: #374151; margin-bottom: .5rem; }
+@media (min-width: 640px) { .contact-info-panel, .contact-form-panel { padding: 3.5rem 2.5rem 4rem; } }
+@media (min-width: 1024px) { .contact-wrap { grid-template-columns: 1fr 1fr; min-height: 80vh; } .contact-info-panel, .contact-form-panel { padding: 4.5rem 3.5rem; } }
+@media (min-width: 640px) { .loc-grid { grid-template-columns: repeat(3, 1fr) !important; } }

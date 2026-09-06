@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Delhuan Dairy se sampark karein — order dein, sawaal poochein ya farm visit schedule karein. Hum hamesha available hain." />
+  <meta name="author" content="Manish Kumar" />
+  <link rel="canonical" href="https://delhuan-dairy.netlify.app/contact.html" />
+  <meta property="og:title" content="Sampark Karein — Delhuan Dairy" />
+  <meta property="og:url"   content="https://delhuan-dairy.netlify.app/contact.html" />
+  <title>Sampark Karein — Delhuan Dairy</title>
+
+  <script src="css/tailwind.min.css"></script>
+  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/shared.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    /* ── Inner-page navbar (always green) ───────────────── */
+    #navbar {
+      background: linear-gradient(135deg,#0d3b22,#1a5c38);
+      padding: .75rem 0;
+      box-shadow: 0 2px 16px rgba(0,0,0,.18);
+    }
+
+    /* ── Page Hero ─────────────────────────────────────── */
+    .page-hero {
+      padding: 6rem 0 4.5rem;
+      background: linear-gradient(135deg,#071c10,#0f3d25 50%,#1a5c38);
+      position: relative; overflow: hidden;
+    }
+    .page-hero::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 50px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 50'%3E%3Cpath fill='%23fdf8f0' d='M0,50 C360,0 1080,0 1440,50 L1440,50 L0,50 Z'/%3E%3C/svg%3E") center/cover no-repeat;
+    }
+    @media(min-width:768px){ .page-hero { padding: 7.5rem 0 5rem; } }
+
+    .breadcrumb {
+      display: flex; align-items: center; gap: .5rem; flex-wrap: wrap;
+      font-family: 'Poppins', sans-serif; font-size: .875rem;
+      color: rgba(255,255,255,.65); justify-content: center; margin-bottom: 1rem;
+    }
+    .breadcrumb a { color: rgba(255,255,255,.65); text-decoration: none; transition: color .2s ease; }
+    .breadcrumb a:hover { color: #f5a623; }
+    .breadcrumb .sep { color: rgba(255,255,255,.35); font-size: .7rem; }
+    .breadcrumb .cur { color: #fff; font-weight: 600; }
+
+    /* ── Contact split layout ──────────────────────────── */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr;
+      background: #fdf8f0;
+    }
+    @media(min-width:1024px) {
+      .contact-wrap { grid-template-columns: 1fr 1fr; min-height: 80vh; }
+    }
+
+    /* Left green panel */
+    .contact-info-panel {
+      background: linear-gradient(160deg,#071c10 0%,#0f3d25 55%,#1a5c38 100%);
+      position: relative; overflow: hidden;
+      padding: 3rem 1.75rem 3.5rem;
+    }
+    @media(min-width:640px)  { .contact-info-panel { padding: 3.5rem 2.5rem 4rem; } }
+    @media(min-width:1024px) { .contact-info-panel { padding: 4.5rem 3.5rem 4.5rem; } }
+
+    .contact-info-panel::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 70% 50% at 10% 90%, rgba(245,166,35,.1) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 90% 10%, rgba(255,255,255,.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .circ {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.06); pointer-events: none;
+    }
+
+    /* Contact info rows */
+    .cinfo-card {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px; padding: 1.125rem 1.25rem;
+      display: flex; align-items: center; gap: 1rem;
+      transition: background .25s ease, transform .25s ease;
+      text-decoration: none;
+    }
+    .cinfo-card:hover {
+      background: rgba(255,255,255,.12);
+      transform: translateY(-2px);
+    }
+    .cinfo-icon {
+      width: 46px; height: 46px; border-radius: 13px;
+      background: rgba(245,166,35,.2); color: #f5a623;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.125rem; flex-shrink: 0;
+    }
+    .cinfo-label {
+      font-family: 'Poppins', sans-serif; font-size: .7rem; font-weight: 600;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: rgba(255,255,255,.45); margin-bottom: .2rem;
+    }
+    .cinfo-value {
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: .9375rem;
+      color: #fff; line-height: 1.35;
+    }
+    .cinfo-value a { color: #fff; text-decoration: none; transition: color .2s ease; }
+    .cinfo-value a:hover { color: #fde047; }
+
+    /* Hours table */
+    .hours-table { width: 100%; }
+    .hours-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .625rem .875rem; border-bottom: 1px solid rgba(255,255,255,.07);
+      flex-wrap: wrap; gap: .25rem;
+    }
+    .hours-row:last-child { border-bottom: none; }
+    .hours-key { font-family: 'Inter', sans-serif; color: rgba(255,255,255,.6); font-size: .8125rem; }
+    .hours-val { font-family: 'Poppins', sans-serif; font-weight: 600; color: #fff; font-size: .8125rem; white-space: nowrap; }
+
+    /* Right form panel */
+    .contact-form-panel {
+      background: #fdf8f0;
+      padding: 3rem 1.75rem 3.5rem;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    @media(min-width:640px)  { .contact-form-panel { padding: 3.5rem 2.5rem 4rem; } }
+    @media(min-width:1024px) { .contact-form-panel { padding: 4.5rem 3.5rem 4.5rem; } }
+
+    /* ── Form field with icon — FIXED ─────────────────── */
+    .form-group { margin-bottom: 1.25rem; }
+    .form-label {
+      display: block;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: .875rem;
+      color: #374151; margin-bottom: .5rem;
+    }
+    .form-label .req { color: #ef4444; margin-left: .2rem; }
+
+    /* Icon wrapper — icon floats left INSIDE field */
+    .field-wrap {
+      position: relative;
+      display: flex; align-items: center;
+    }
+    .field-icon {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9ca3af;
+      font-size: .9rem;
+      pointer-events: none;
+      z-index: 2;
+      /* fixed line-height so icon stays vertically centered */
+      line-height: 1;
+      display: flex; align-items: center; justify-content: center;
+      width: 18px; height: 18px;
+    }
+    /* Textarea icon is top-aligned */
+    .field-wrap.textarea-wrap .field-icon {
+      top: 1.125rem;
+      transform: none;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: .875rem 1rem .875rem 2.875rem; /* left padding = icon space */
+      background: #fff;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-family: 'Inter', sans-serif; font-size: .9375rem; color: #111827;
+      outline: none;
+      transition: border-color .2s ease, box-shadow .2s ease;
+      -webkit-appearance: none;
+      line-height: 1.5;
+    }
+    .form-input::placeholder { color: #b0b8c4; }
+    .form-input:focus {
+      border-color: #1a5c38;
+      box-shadow: 0 0 0 3px rgba(26,92,56,.12);
+    }
+    .form-input:focus ~ .field-icon,
+    .field-wrap:focus-within .field-icon { color: #1a5c38; }
+
+    .form-input.error { border-color: #ef4444; }
+    .form-input.error:focus { box-shadow: 0 0 0 3px rgba(239,68,68,.12); }
+
+    textarea.form-input {
+      padding-top: 1rem; padding-bottom: 1rem;
+      resize: vertical; min-height: 130px;
+    }
+
+    select.form-input {
+      cursor: pointer;
+      padding-right: 2.5rem;  /* space for chevron arrow */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%236b7280'%3E%3Cpath fill-rule='evenodd' d='M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right .875rem center;
+      background-size: 18px;
+    }
+
+    .form-error {
+      font-family: 'Inter', sans-serif; font-size: .8rem;
+      color: #ef4444; margin-top: .35rem; display: none;
+    }
+    .form-error.show { display: block; }
+
+    /* Name + Phone side by side on ≥560px */
+    .form-row {
+      display: grid; grid-template-columns: 1fr; gap: 1.25rem; margin-bottom: 1.25rem;
+    }
+    @media(min-width:560px) { .form-row { grid-template-columns: 1fr 1fr; } }
+
+    /* Char counter */
+    .char-count {
+      font-family: 'Inter', sans-serif; font-size: .75rem;
+      color: #9ca3af; text-align: right; margin-top: .3rem;
+    }
+
+    /* Submit button */
+    .submit-btn {
+      width: 100%; padding: 1rem; border-radius: 12px; border: none; cursor: pointer;
+      background: linear-gradient(135deg,#1a5c38,#2d8653);
+      color: #fff; font-family: 'Poppins', sans-serif; font-weight: 700;
+      font-size: 1rem; display: flex; align-items: center; justify-content: center;
+      gap: .625rem; transition: all .3s ease;
+      box-shadow: 0 4px 18px rgba(26,92,56,.35);
+    }
+    .submit-btn:hover:not(:disabled) {
+      background: linear-gradient(135deg,#0f3d25,#1a5c38);
+      box-shadow: 0 6px 24px rgba(26,92,56,.45);
+      transform: translateY(-2px);
+    }
+    .submit-btn:disabled { opacity: .7; cursor: not-allowed; transform: none; }
+
+    /* Success message */
+    #form-success {
+      display: none; background: linear-gradient(135deg,#d1fae5,#a7f3d0);
+      border: 1px solid #6ee7b7; border-radius: 14px; padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem; align-items: center; gap: .875rem;
+    }
+    #form-success.show { display: flex; }
+    .success-text-head { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: .9375rem; color: #065f46; }
+    .success-text-sub  { font-family: 'Inter', sans-serif; font-size: .8125rem; color: #047857; margin-top: .15rem; }
+
+    /* Quick contact chips below form */
+    .quick-chips { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1.75rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: .8125rem;
+      padding: .55rem 1.1rem; border-radius: 9999px; text-decoration: none;
+      transition: all .25s ease; border: 2px solid;
+    }
+    .chip-green { background: #f0fdf4; border-color: #86efac; color: #15803d; }
+    .chip-green:hover { background: #1a5c38; border-color: #1a5c38; color: #fff; }
+    .chip-wa { background: #f0fdf4; border-color: #86efac; color: #15803d; }
+    .chip-wa:hover { background: #25d366; border-color: #25d366; color: #fff; }
+    .chip-blue { background: #eff6ff; border-color: #93c5fd; color: #1d4ed8; }
+    .chip-blue:hover { background: #2563eb; border-color: #2563eb; color: #fff; }
+
+    /* ── Map section ───────────────────────────────────── */
+    .map-wrap {
+      border-radius: 20px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.12);
+      border: 3px solid rgba(26,92,56,.1);
+      aspect-ratio: 16/7; position: relative; background: #e8f5e9;
+    }
+    @media(max-width:640px) { .map-wrap { aspect-ratio: 4/3; } }
+    .map-placeholder {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 1rem;
+      background: linear-gradient(135deg,#e8f5e9,#c8e6c9); color: #1a5c38;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ── FAQ Accordion ─────────────────────────────────── */
+    .accordion-item {
+      background: #fff; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,.06); border: 1px solid #f3f4f6;
+      margin-bottom: .75rem;
+    }
+    .accordion-trigger {
+      width: 100%; display: flex; align-items: center;
+      justify-content: space-between; padding: 1.125rem 1.375rem;
+      background: none; border: none; cursor: pointer; text-align: left;
+      transition: background .2s ease;
+    }
+    .accordion-trigger:hover { background: #f9fafb; }
+    .accordion-title {
+      font-family: 'Poppins', sans-serif; font-weight: 600; font-size: .9375rem;
+      color: #111827; line-height: 1.4; padding-right: 1rem;
+    }
+    .accordion-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: #f3f4f6; color: #6b7280;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.125rem; font-weight: 300; flex-shrink: 0;
+      transition: transform .35s ease, background .2s ease, color .2s ease;
+    }
+    .accordion-item.open .accordion-icon {
+      transform: rotate(45deg);
+      background: #1a5c38; color: #fff;
+    }
+    .accordion-content {
+      max-height: 0; overflow: hidden;
+      transition: max-height .38s ease;
+    }
+    .accordion-body {
+      padding: 0 1.375rem 1.375rem;
+      font-family: 'Inter', sans-serif; color: #4b5563; font-size: .9375rem;
+      line-height: 1.7; border-top: 1px solid #f3f4f6;
+      padding-top: 1rem;
+    }
+
+    /* ── Common utilities ──────────────────────────────── */
+    .section-py{padding-top:3.5rem;padding-bottom:3.5rem}
+    @media(min-width:768px){.section-py{padding-top:5rem;padding-bottom:5rem}}
+    @media(min-width:1024px){.section-py{padding-top:6.5rem;padding-bottom:6.5rem}}
+    .bg-cream{background:#fdf8f0}
+    .container-custom{width:100%;max-width:1280px;margin:0 auto;padding:0 1.25rem}
+    @media(min-width:640px){.container-custom{padding:0 1.5rem}}
+    @media(min-width:1024px){.container-custom{padding:0 2.5rem}}
+    @media(min-width:1280px){.container-custom{padding:0 3.5rem}}
+    .sec-badge{display:inline-flex;align-items:center;gap:.375rem;background:rgba(26,92,56,.08);color:#1a5c38;font-family:'Poppins',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .875rem;border-radius:9999px;border:1px solid rgba(26,92,56,.15);margin-bottom:.875rem}
+    .sec-title{font-family:'Playfair Display',serif;font-weight:700;line-height:1.2;color:#111827}
+    .sec-divider{width:56px;height:4px;background:linear-gradient(to right,#1a5c38,#f5a623);border-radius:9999px;margin:1rem 0}
+    .sec-divider.center{margin:1rem auto}
+    .two-col{display:grid;grid-template-columns:1fr;gap:3rem;align-items:start}
+    @media(min-width:1024px){.two-col{grid-template-columns:1fr 1fr;gap:4rem}}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Poppins',sans-serif;font-weight:600;font-size:.9375rem;padding:.875rem 1.75rem;border-radius:9999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:all .3s ease;line-height:1.3}
+    .btn-primary{background:#1a5c38;color:#fff;border-color:#1a5c38;box-shadow:0 4px 18px rgba(26,92,56,.35)}
+    .btn-primary:hover{background:#0f3d25;transform:translateY(-2px)}
+    .btn-lg{padding:1rem 2.25rem;font-size:1rem}
+    .cta-section{background:linear-gradient(135deg,#d4891a,#f5a623 55%,#fde68a);position:relative;overflow:hidden}
+    .reveal{opacity:0;transition:opacity .7s ease,transform .7s ease}
+    .reveal.from-bottom{transform:translateY(44px)}
+    .reveal.from-left{transform:translateX(-44px)}
+    .reveal.from-right{transform:translateX(44px)}
+    .reveal.visible{opacity:1;transform:translate(0) scale(1)}
+    .delay-100{transition-delay:.1s}.delay-200{transition-delay:.2s}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+    .anim-fade-in-up{animation:fadeInUp .8s ease both}
+    .anim-delay-1{animation-delay:.15s}
+    #page-loader{position:fixed;inset:0;background:#0f3d25;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}
+    #page-loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+    .loader-text{font-family:'Playfair Display',serif;font-size:1.875rem;color:#fff;animation:loaderPulse 1.2s ease-in-out infinite}
+    .loader-dots{display:flex;justify-content:center;gap:.4rem;margin-top:.875rem}
+    .loader-dot{width:8px;height:8px;border-radius:50%;background:#f5a623;display:inline-block}
+    .loader-dot:nth-child(1){animation:bounce 1s .0s infinite}
+    .loader-dot:nth-child(2){animation:bounce 1s .15s infinite}
+    .loader-dot:nth-child(3){animation:bounce 1s .30s infinite}
+    @keyframes loaderPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.95)}}
+    @keyframes bounce{0%,100%{transform:translateY(-25%)}50%{transform:translateY(0)}}
+  </style>
+</head>
+<body style="overflow-x:hidden;background:#fdf8f0">
+
+<!-- Page Loader -->
+<div id="page-loader">
+  <div style="text-align:center">
+    <div class="loader-text">🐄 Delhuan Dairy</div>
+    <div class="loader-dots">
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+      <span class="loader-dot"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Navbar injected by components.js -->
+<div id="site-navbar"></div>
+
+<!-- ══════════════════════════════════════════
+     PAGE HERO
+══════════════════════════════════════════ -->
+<header class="page-hero" aria-labelledby="contact-page-title">
+  <div class="container-custom" style="position:relative;z-index:1;text-align:center">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="sep"><i class="fas fa-chevron-right"></i></span>
+      <span class="cur">Sampark Karein</span>
+    </nav>
+    <div class="sec-badge" style="background:rgba(245,166,35,.18);border-color:rgba(245,166,35,.35);color:#fde047;margin-bottom:1rem">
+      <i class="fas fa-headset" aria-hidden="true"></i> Hum Yahan Hain
+    </div>
+    <h1 id="contact-page-title" class="anim-fade-in-up"
+        style="font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:clamp(2.25rem,5vw,4rem);line-height:1.15;margin-bottom:.875rem">
+      Sampark Karein
+    </h1>
+    <p class="anim-fade-in-up anim-delay-1"
+       style="font-family:'Poppins',sans-serif;font-weight:300;color:rgba(255,255,255,.82);font-size:clamp(.9375rem,2vw,1.125rem);max-width:34rem;margin:0 auto">
+      Order dein, sawaal poochein ya farm visit schedule karein — hum hamesha available hain
+    </p>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════
+     CONTACT SPLIT — Info + Form
+══════════════════════════════════════════ -->
+
+<div class="container-custom">
+<div class="contact-wrap ">
+
+  <!-- ── LEFT: Contact Info Panel ── -->
+  <div class="contact-info-panel" aria-label="Contact Information">
+    <!-- Decorative circles -->
+    <div class="circ" style="width:260px;height:260px;top:-80px;right:-80px" aria-hidden="true"></div>
+    <div class="circ" style="width:160px;height:160px;bottom:60px;left:-50px" aria-hidden="true"></div>
+
+    <div style="position:relative;z-index:1;max-width:480px">
+
+      <!-- Section label -->
+      <div style="font-family:'Poppins',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:1.25rem">
+        Hamaari Contact Details
+      </div>
+
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.875rem,4vw,2.75rem);color:#fff;line-height:1.2;margin-bottom:.625rem">
+        Hum Se
+      </h2>
+      <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.875rem,4vw,2.75rem);color:#fde047;line-height:1.2;margin-bottom:1.75rem;font-style:italic">
+        Baat Karein
+      </h2>
+
+      <!-- Contact cards -->
+      <div style="display:flex;flex-direction:column;gap:.875rem;margin-bottom:2.5rem">
+
+        <!-- Phone -->
+        <a href="tel:[BUSINESS_PHONE]" class="cinfo-card" aria-label="Phone par call karein">
+          <div class="cinfo-icon"><i class="fas fa-phone-alt" aria-hidden="true"></i></div>
+          <div>
+            <div class="cinfo-label">Phone / WhatsApp</div>
+            <div class="cinfo-value">[BUSINESS PHONE]</div>
+          </div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/[WHATSAPP_NUMBER]" target="_blank" rel="noopener noreferrer"
+           class="cinfo-card" aria-label="WhatsApp par order karein">
+          <div class="cinfo-icon" style="background:rgba(37,211,102,.2);color:#4ade80">
+            <i class="fab fa-whatsapp" style="font-size:1.25rem" aria-hidden="true"></i>
+          </div>
+          <div>
+            <div class="cinfo-label">WhatsApp Order</div>
+            <div class="cinfo-value">Abhi Message Karein <i class="fas fa-arrow-right" style="font-size:.75rem;opacity:.7" aria-hidden="true"></i></div>
+          </div>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:[BUSINESS_EMAIL]" class="cinfo-card" aria-label="Email karein">
+          <div class="cinfo-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+          <div>
+            <div class="cinfo-label">Email</div>
+            <div class="cinfo-value">[BUSINESS EMAIL]</div>
+          </div>
+        </a>
+
+        <!-- Address -->
+        <div class="cinfo-card" style="cursor:default">
+          <div class="cinfo-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+          <div>
+            <div class="cinfo-label">Hamara Pata</div>
+            <div class="cinfo-value" style="font-size:.9rem">Delhuan, Sitamarhi District<br>Bihar — 843302, India</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Delivery Hours table -->
+      <h3 style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.0625rem;color:#fff;margin-bottom:.875rem;display:flex;align-items:center;gap:.625rem">
+        <i class="fas fa-clock" style="color:#f5a623;font-size:.9rem" aria-hidden="true"></i> Delivery &amp; Order Timing
+      </h3>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;margin-bottom:2.5rem">
+        <div class="hours-table">
+          <div class="hours-row"><span class="hours-key">Doodh Delivery</span><span class="hours-val">Subah 5:00 – 7:00 AM</span></div>
+          <div class="hours-row"><span class="hours-key">Order Timing</span><span class="hours-val">Raat 8PM tak</span></div>
+          <div class="hours-row"><span class="hours-key">Ghee / Paneer</span><span class="hours-val">1 din advance</span></div>
+          <div class="hours-row" style="border-bottom:none">
+            <span class="hours-key">Availability</span>
+            <span class="hours-val" style="color:#4ade80;display:flex;align-items:center;gap:.4rem">
+              <span style="width:7px;height:7px;border-radius:50%;background:#4ade80;display:inline-block;animation:bounce 1.5s infinite" aria-hidden="true"></span>
+              Har Din, 365 din
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social icons -->
+      <p style="font-family:'Inter',sans-serif;color:rgba(255,255,255,.45);font-size:.8125rem;margin-bottom:.875rem">
+        Social Media par bhi follow karein:
+      </p>
+      <div style="display:flex;gap:.625rem">
+        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://wa.me/[WHATSAPP_NUMBER]" class="social-icon" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+      </div>
+
+    </div>
+  </div><!-- /.contact-info-panel -->
+
+
+  <!-- ── RIGHT: Contact Form Panel ── -->
+  <div class="contact-form-panel">
+    <div style="max-width:520px;width:100%">
+
+      <!-- Form heading -->
+      <div style="margin-bottom:2rem">
+        <div class="sec-badge"><i class="fas fa-paper-plane" aria-hidden="true"></i> Message Bhejein</div>
+        <h2 style="font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.75rem,3.5vw,2.5rem);color:#111827;margin-top:.5rem;margin-bottom:.5rem">
+          Aapka Message
+        </h2>
+        <p style="font-family:'Inter',sans-serif;color:#6b7280;font-size:.9375rem">
+          Neeche form bharein — hum 2 ghante ke andar reply karenge.
+        </p>
+        <div class="sec-divider"></div>
+      </div>
+
+      <!-- Success message -->
+      <div id="form-success" role="alert" aria-live="polite">
+        <span style="font-size:1.75rem;flex-shrink:0" aria-hidden="true">✅</span>
+        <div>
+          <div class="success-text-head">Shukriya! Aapka message mil gaya.</div>
+          <div class="success-text-sub">Hum 2 ghante ke andar aapse sampark karenge.</div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <form id="contact-form" novalidate autocomplete="on" aria-label="Contact Form">
+
+        <!-- Row 1: Name + Phone -->
+        <div class="form-row">
+
+          <!-- Name -->
+          <div class="form-group">
+            <label for="f-name" class="form-label">
+              Aapka Naam <span class="req" aria-hidden="true">*</span>
+            </label>
+            <div class="field-wrap">
+              <span class="field-icon" aria-hidden="true">
+                <i class="fas fa-user"></i>
+              </span>
+              <input type="text" id="f-name" name="name" required
+                     class="form-input"
+                     placeholder="Jaise: Ramesh Kumar"
+                     autocomplete="name"
+                     aria-required="true" />
+            </div>
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="f-phone" class="form-label">
+              Phone Number <span class="req" aria-hidden="true">*</span>
+            </label>
+            <div class="field-wrap">
+              <span class="field-icon" aria-hidden="true">
+                <i class="fas fa-phone"></i>
+              </span>
+              <input type="tel" id="f-phone" name="phone" required
+                     class="form-input"
+                     placeholder="+91 98765 43210"
+                     autocomplete="tel"
+                     aria-required="true" />
+            </div>
+            <span class="form-error" id="phone-error" role="alert"></span>
+          </div>
+
+        </div><!-- /.form-row -->
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="f-email" class="form-label">Email Address</label>
+          <div class="field-wrap">
+            <span class="field-icon" aria-hidden="true">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <input type="email" id="f-email" name="email"
+                   class="form-input"
+                   placeholder="aap@example.com"
+                   autocomplete="email" />
+          </div>
+          <span class="form-error" id="email-error" role="alert"></span>
+        </div>
+
+        <!-- Purpose / Interest -->
+        <div class="form-group">
+          <label for="f-interest" class="form-label">
+            Aap Kya Chahte Hain? <span class="req" aria-hidden="true">*</span>
+          </label>
+          <div class="field-wrap">
+            <span class="field-icon" aria-hidden="true">
+              <i class="fas fa-list-check"></i>
+            </span>
+            <select id="f-interest" name="interest" required
+                    class="form-input"
+                    aria-required="true">
+              <option value="" disabled selected>-- Chunein --</option>
+              <option value="doodh-order">🥛 Rozana Doodh Order</option>
+              <option value="ghee-order">✨ Desi Ghee Order</option>
+              <option value="paneer-order">🧀 Paneer Order</option>
+              <option value="bulk-order">📦 Bulk Order (Restaurant/Hotel)</option>
+              <option value="farm-visit">🐄 Farm Visit Schedule</option>
+              <option value="price-info">💰 Price aur Delivery Jaankari</option>
+              <option value="other">❓ Kuch Aur</option>
+            </select>
+          </div>
+          <span class="form-error" id="interest-error" role="alert"></span>
+        </div>
+
+        <!-- Delivery Address -->
+        <div class="form-group">
+          <label for="f-address" class="form-label">Delivery Address / Gaon</label>
+          <div class="field-wrap">
+            <span class="field-icon" aria-hidden="true">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <input type="text" id="f-address" name="address"
+                   class="form-input"
+                   placeholder="Apna gaon / mohalla / area batayein"
+                   autocomplete="street-address" />
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="f-message" class="form-label">
+            Aapka Message <span class="req" aria-hidden="true">*</span>
+          </label>
+          <div class="field-wrap textarea-wrap">
+            <span class="field-icon" aria-hidden="true">
+              <i class="fas fa-comment-dots"></i>
+            </span>
+            <textarea id="f-message" name="message" required
+                      class="form-input"
+                      placeholder="Apna order ya sawaal yahan likhein..."
+                      rows="4"
+                      maxlength="500"
+                      aria-required="true"></textarea>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:start;margin-top:.35rem">
+            <span class="form-error" id="message-error" role="alert"></span>
+            <span class="char-count" id="char-count" aria-live="polite">0 / 500</span>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn" aria-label="Message bhejein">
+          <i class="fas fa-paper-plane" aria-hidden="true"></i>
+          Message Bhejein
+        </button>
+
+        <!-- Privacy note -->
+        <p style="text-align:center;font-family:'Inter',sans-serif;font-size:.8rem;color:#9ca3af;margin-top:.875rem;display:flex;align-items:center;justify-content:center;gap:.375rem">
+          <i class="fas fa-lock" style="color:#1a5c38;font-size:.75rem" aria-hidden="true"></i>
+          Aapki jaankari surakshit hai — hum kisi ke saath share nahi karte.
+        </p>
+
+      </form>
+
+      <!-- Quick contact chips -->
+      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid #e5e7eb">
+        <p style="font-family:'Poppins',sans-serif;font-weight:600;font-size:.875rem;color:#374151;margin-bottom:.875rem">
+          Ya seedha sampark karein:
+        </p>
+        <div class="quick-chips">
+          <a href="tel:[BUSINESS_PHONE]" class="chip chip-green">
+            <i class="fas fa-phone-alt" aria-hidden="true"></i> Call Karein
+          </a>
+          <a href="https://wa.me/[WHATSAPP_NUMBER]" target="_blank" rel="noopener noreferrer" class="chip chip-wa">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp
+          </a>
+          <a href="mailto:[BUSINESS_EMAIL]" class="chip chip-blue">
+            <i class="fas fa-envelope" aria-hidden="true"></i> Email
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /max-w-520 -->
+  </div><!-- /.contact-form-panel -->
+
+</div><!-- /.contact-wrap -->
+</div>
+
+<!-- ══════════════════════════════════════════
+     MAP SECTION
+══════════════════════════════════════════ -->
+<section class="section-py" style="background:#fff" aria-labelledby="map-heading">
+  <div class="container-custom">
+    <div style="text-align:center;margin-bottom:3rem" class="reveal from-bottom">
+      <div class="sec-badge"><i class="fas fa-map-pin" aria-hidden="true"></i> Hamari Location</div>
+      <h2 id="map-heading" class="sec-title" style="font-size:clamp(1.75rem,4vw,3rem);margin-top:.75rem;margin-bottom:.75rem">
+        Hamare Farm Ka <span style="color:#1a5c38">Rasta</span>
+      </h2>
+      <div class="sec-divider center"></div>
+      <p style="font-family:'Inter',sans-serif;color:#6b7280;max-width:34rem;margin:.75rem auto 0;font-size:.9375rem">
+        Delhuan, Sitamarhi District, Bihar — Farm visit ke liye pehle call karke appointment lein.
+      </p>
+    </div>
+
+    <!-- Map embed -->
+    <div class="map-wrap reveal from-bottom">
+      <!-- Replace [GOOGLE_MAP_EMBED_URL] with your actual Google Maps embed URL -->
+      <div class="map-placeholder" id="map-placeholder">
+        <div style="font-size:3.5rem" aria-hidden="true">🗺️</div>
+        <div style="text-align:center">
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:#1a5c38;margin-bottom:.375rem">Delhuan Dairy Farm</div>
+          <div style="font-family:'Inter',sans-serif;color:#4b5563;font-size:.9rem">Delhuan, Sitamarhi District, Bihar — 843302</div>
+          <a href="https://maps.google.com/?q=Delhuan+kochas+Rohtas+Bihar"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary" style="margin-top:1.25rem;display:inline-flex;padding:.625rem 1.5rem;font-size:.875rem;border-radius:9999px">
+            <i class="fas fa-directions" aria-hidden="true"></i> Google Maps Mein Kholein
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Location strips -->
+    <div style="display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2.5rem">
+      <style>@media(min-width:640px){.loc-grid{grid-template-columns:repeat(3,1fr)!important}}</style>
+      <div class="loc-grid" style="display:grid;grid-template-columns:1fr;gap:1.25rem">
+        <div style="background:#fdf8f0;border-radius:16px;padding:1.375rem;text-align:center" class="reveal from-bottom">
+          <div style="font-size:1.875rem;margin-bottom:.625rem" aria-hidden="true">📍</div>
+          <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:.9375rem;color:#111827;margin-bottom:.375rem">Pata</h3>
+          <p style="font-family:'Inter',sans-serif;color:#6b7280;font-size:.875rem">Delhuan, Sitamarhi District<br>Bihar — 843302</p>
+        </div>
+        <div style="background:#fdf8f0;border-radius:16px;padding:1.375rem;text-align:center" class="reveal from-bottom delay-100">
+          <div style="font-size:1.875rem;margin-bottom:.625rem" aria-hidden="true">🚗</div>
+          <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:.9375rem;color:#111827;margin-bottom:.375rem">Kaise Pahunchen</h3>
+          <p style="font-family:'Inter',sans-serif;color:#6b7280;font-size:.875rem">Sitamarhi se 15km<br>NH-104 se seedha raasta</p>
+        </div>
+        <div style="background:#fdf8f0;border-radius:16px;padding:1.375rem;text-align:center" class="reveal from-bottom delay-200">
+          <div style="font-size:1.875rem;margin-bottom:.625rem" aria-hidden="true">📞</div>
+          <h3 style="font-family:'Poppins',sans-serif;font-weight:700;font-size:.9375rem;color:#111827;margin-bottom:.375rem">Farm Visit</h3>
+          <p style="font-family:'Inter',sans-serif;color:#6b7280;font-size:.875rem">Pehle call karein<br>Swagat hamesha hai</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FAQ ACCORDION
+══════════════════════════════════════════ -->
+<section class="section-py bg-cream" aria-labelledby="faq-heading">
+  <div class="container-custom">
+    <div class="two-col">
+
+      <!-- Left: heading -->
+      <div class="reveal from-left">
+        <div class="sec-badge"><i class="fas fa-question-circle" aria-hidden="true"></i> Aksar Poochhe Jaate Hain</div>
+        <h2 id="faq-heading" class="sec-title" style="font-size:clamp(1.75rem,4vw,3rem);margin-top:.75rem;margin-bottom:.75rem">
+          Aapke <span style="color:#1a5c38">Sawaal,</span><br>Hamare Jawaab
+        </h2>
+        <div class="sec-divider"></div>
+        <p style="font-family:'Inter',sans-serif;color:#6b7280;font-size:.9375rem;line-height:1.7;margin-bottom:2rem">
+          Koi bhi sawaal ho toh seedhe hum se poochh sakte hain — lekin neeche ke sawaal sabse zyada poochhe jaate hain.
+        </p>
+        <a href="tel:[BUSINESS_PHONE]" class="btn btn-primary">
+          <i class="fas fa-phone" aria-hidden="true"></i> Seedha Poochhen
+        </a>
+      </div>
+
+      <!-- Right: accordion -->
+      <div class="reveal from-right">
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Kya doodh mein koi milawat hai?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">Bilkul nahi. Hamare doodh mein pani, starch, urea ya koi bhi chemical nahi milaya jaata. Aap khud ghar par lactometer test karke dekh sakte hain. 100% guaranteed shuddh.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Kya rozana delivery hoti hai?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">Haan, 365 din — chaahe barsaat ho, thand ho ya garmi. Subah 5–7 baje hum aapke darwaze par hote hain. Koi chutti nahi, koi bahana nahi.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Minimum order kitna hai?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">Doodh ke liye minimum 500ml. Ghee ke liye 250gm. Paneer ke liye 500gm. Bulk orders ke liye koi minimum nahi — seedhe baat karein.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Payment kaise karein?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">Cash, UPI (PhonePe, GooglePay, Paytm) — sab accepted hai. Monthly settlement bhi ho sakta hai regular customers ke liye. Pehle hafte trial mein koi advance nahi.</div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-trigger" type="button" aria-expanded="false">
+            <span class="accordion-title">Kya delivery area mein hum aate hain?</span>
+            <span class="accordion-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">Hum Delhuan aur aas-paas ke 15–20km ke dayre mein deliver karte hain. Sitamarhi town bhi cover hota hai. Call karke confirm kar lein ki aapka area covered hai.</div>
+          </div>
+        </div>
+
+      </div><!-- /accordion list -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA
+══════════════════════════════════════════ -->
+<section class="cta-section section-py" aria-labelledby="contact-cta-heading">
+  <div class="container-custom" style="position:relative;z-index:1;text-align:center">
+    <div style="max-width:38rem;margin:0 auto" class="reveal from-bottom">
+      <div style="font-size:3.5rem;margin-bottom:1.25rem" aria-hidden="true">🐄</div>
+      <h2 id="contact-cta-heading"
+          style="font-family:'Playfair Display',serif;font-weight:800;color:#fff;font-size:clamp(1.75rem,4vw,2.75rem);margin-bottom:1rem">
+        Aaj Hi Shuruat Karein!
+      </h2>
+      <p style="font-family:'Poppins',sans-serif;font-weight:300;color:rgba(255,255,255,.92);font-size:1.0625rem;margin-bottom:2rem;line-height:1.65">
+        Pehle hafte ka trial bilkul free — koi advance nahi, koi commitment nahi.
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:.875rem;justify-content:center">
+        <a href="tel:[BUSINESS_PHONE]"
+           class="btn btn-lg" style="background:#fff;border-color:#fff;color:#d97706;font-weight:700">
+          <i class="fas fa-phone" aria-hidden="true"></i> Abhi Call Karein
+        </a>
+        <a href="https://wa.me/[WHATSAPP_NUMBER]"
+           target="_blank" rel="noopener noreferrer"
+           class="btn btn-lg" style="background:#25d366;border-color:#25d366;color:#fff">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Order
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer injected by components.js -->
+<div id="site-footer"></div>
+
+<script>
+/* Tailwind config */
+if (typeof tailwind !== 'undefined') {
+  tailwind.config = {
+    theme: { extend: { colors: {
+      primary: {'DEFAULT':'#1a5c38', dark:'#0f3d25'},
+      secondary: {'DEFAULT':'#f5a623'}
+    } } }
+  };
+}
+
+/* Char counter for textarea */
+(function () {
+  var msg = document.getElementById('f-message');
+  var cnt = document.getElementById('char-count');
+  if (!msg || !cnt) return;
+  msg.addEventListener('input', function () {
+    var len = msg.value.length;
+    cnt.textContent = len + ' / 500';
+    cnt.style.color = len > 460 ? '#ef4444' : '#9ca3af';
+  });
+})();
+
+/* Map: show iframe if actual URL provided */
+(function () {
+  // Replace placeholder with real embed URL to show map
+  var embedUrl = '[GOOGLE_MAP_EMBED_URL]';
+  if (embedUrl !== '[GOOGLE_MAP_EMBED_URL]') {
+    var placeholder = document.getElementById('map-placeholder');
+    var wrap = placeholder ? placeholder.parentElement : null;
+    if (wrap) {
+      var iframe = document.createElement('iframe');
+      iframe.src = embedUrl;
+      iframe.title = 'Delhuan Dairy Location Map';
+      iframe.allowFullscreen = true;
+      iframe.loading = 'lazy';
+      iframe.style.cssText = 'width:100%;height:100%;border:none;display:block';
+      placeholder.style.display = 'none';
+      wrap.appendChild(iframe);
+    }
+  }
+})();
+
+/* Location grid responsive fix (vanilla) */
+(function(){
+  var g = document.querySelector('.loc-grid');
+  if(!g) return;
+  function check(){ g.style.gridTemplateColumns = window.innerWidth >= 640 ? 'repeat(3,1fr)' : '1fr'; }
+  check();
+  window.addEventListener('resize', check, {passive:true});
+})();
+</script>
+
+<script src="js/components.js"></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>

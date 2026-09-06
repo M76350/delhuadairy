@@ -1,0 +1,2 @@
+# Netlify fallback: unknown pages use the branded 404 document and keep 404 status.
+/* /404.html 404
