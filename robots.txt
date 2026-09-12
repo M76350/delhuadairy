@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /assets/
-Sitemap: https://delhuan-dairy.netlify.app/sitemap.xml
+Sitemap: https://delhuadairy.vercel.app/sitemap.xml

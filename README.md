@@ -1,6 +1,6 @@
 # 🐄 Delhuan Dairy — Website
 
-**Owner:** Manish Kumar  
+**Owner:** Anil Kumar Singh
 **Location:** Delhuan, Sitamarhi District, Bihar — 843302  
 **Tech Stack:** HTML5 · Tailwind CSS (Offline) · Vanilla JavaScript · CSS Animations  
 
@@ -12,7 +12,7 @@
 delhuandairy/
 │
 ├── index.html          ← Homepage
-├── about.html          ← About Us / Manish Kumar Story
+├── about.html          ← About Us / Anil Kumar Singh Story
 ├── products.html       ← All Dairy Products (with filter)
 ├── gallery.html        ← Farm Photo Gallery (masonry + lightbox)
 ├── contact.html        ← Contact Form + Map + FAQ
@@ -34,9 +34,9 @@ delhuandairy/
 ├── js/
 │   └── main.js           ← All JS: navbar, animations, form, lightbox, etc.
 │
-├── manishimage.jpeg    ← Owner photo (Manish Kumar)
+├── manishimage.jpeg    ← Owner photo (Anil Kumar Singh)
 ├── signature.jpeg      ← Signature image
-├── signaturemanish.jpeg← Manish Kumar signature
+├── signaturemanish.jpeg← Anil Kumar Singh signature
 └── README.md           ← This file
 ```
 
@@ -175,7 +175,7 @@ Website Google Fonts use karti hai. Offline use ke liye:
 | Page | File | Key Sections |
 |---|---|---|
 | Home | `index.html` | Hero, Stats, About Preview, Products, Features, Process, Testimonials, Gallery Preview, CTA |
-| About | `about.html` | Owner Story (Manish Kumar), Mission/Vision, Timeline 2009–2024, Farm Details |
+| About | `about.html` | Owner Story (Anil Kumar Singh), Mission/Vision, Timeline 2009–2024, Farm Details |
 | Products | `products.html` | Filter Bar, 6 Products (Doodh/Ghee/Paneer/Dahi/Makhan/Chach), Comparison Table |
 | Gallery | `gallery.html` | Masonry Grid, Category Filter, Lightbox (prev/next/keyboard/swipe), Farm Story |
 | Contact | `contact.html` | Split Layout, Contact Form (validated), Map, FAQ Accordion |
@@ -252,4 +252,4 @@ Koi issue ho toh:
 ---
 
 *Delhuan Dairy — Taaza Doodh, Shuddh Jeewan* 🥛  
-*Manish Kumar — Sansthapak*
+*Anil Kumar Singh — Sansthapak*

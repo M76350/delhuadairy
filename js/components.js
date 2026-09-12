@@ -118,11 +118,11 @@
           </a>
           <p class="footer-tagline">
             Taaza aur shuddh dairy utpaad seedha farm se aapke ghar tak.
-            Manish Kumar dwara sanchalit, Delhuan, Bihar.
+            Anil Kumar Singh dwara sanchalit, Delhuan, Bihar.
           </p>
           <div class="footer-signature-wrap">
-            <img src="signaturemanish.jpeg" alt="Manish Kumar ki hastakshar" class="footer-signature" />
-            <span class="footer-sig-name">Manish Kumar — Sansthapak</span>
+            <img src="signaturemanish.jpeg" alt="Anil Kumar Singh ki hastakshar" class="footer-signature" />
+            <span class="footer-sig-name">Anil Kumar Singh — Sansthapak</span>
           </div>
         </div>
 
@@ -182,7 +182,7 @@
   <div class="footer-bottom">
     <div class="container-custom">
       <div class="footer-bottom-inner">
-        <span>© 2024 Delhuan Dairy. Sabhee adhikaar surakshit. Manish Kumar dwara sanchalit.</span>
+        <span>© 2024 Delhuan Dairy. Sabhee adhikaar surakshit. Anil Kumar Singh dwara sanchalit.</span>
         <div class="footer-bottom-links">
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
