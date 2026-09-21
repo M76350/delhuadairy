@@ -118,7 +118,7 @@
           </a>
           <p class="footer-tagline">
             Taaza aur shuddh dairy utpaad seedha farm se aapke ghar tak.
-            Anil Kumar Singh dwara sanchalit, Delhuan, Bihar.
+            Anil Kumar Singh dwara sanchalit, Delhuan Village, Rohtas, Bihar.
           </p>
           <div class="footer-signature-wrap">
             <img src="signaturemanish.jpeg" alt="Anil Kumar Singh ki hastakshar" class="footer-signature" />
@@ -151,7 +151,7 @@
           <div class="footer-contact-list">
             <div class="footer-contact-row">
               <div class="footer-contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-              <span class="footer-contact-text">Delhuan, Sitamarhi District,<br>Bihar — 843302</span>
+              <span class="footer-contact-text">Delhuan Dairy Farm<br>Delhuan Village, Chitaon Panchayat<br>Indour Post Office, Dinara Thana<br>Kochas Prakhand, Rohtas, Bihar — 802213, India</span>
             </div>
             <div class="footer-contact-row">
               <div class="footer-contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>

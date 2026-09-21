@@ -1,7 +1,7 @@
 # 🐄 Delhuan Dairy — Website
 
 **Owner:** Anil Kumar Singh
-**Location:** Delhuan, Sitamarhi District, Bihar — 843302  
+**Location:** Delhuan Village, Chitaon Panchayat, Indour Post Office, Dinara Thana, Kochas Prakhand, Rohtas, Bihar — 802213, India  
 **Tech Stack:** HTML5 · Tailwind CSS (Offline) · Vanilla JavaScript · CSS Animations  
 
 ---
