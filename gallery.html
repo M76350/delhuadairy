@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Delhuan Dairy Farm gallery mein farm, cows, milk production aur dairy products ki photos dekhein. Delhuan, Sitamarhi, Bihar." />
+  <meta name="description" content="Delhuan Dairy Farm gallery mein farm, cows, milk production aur dairy products ki photos dekhein. Delhuan Village, Rohtas, Bihar." />
   <meta name="author" content="Anil Kumar Singh" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#1a5c38" />
@@ -29,88 +29,6 @@
   <link rel="stylesheet" href="css/inner-page.css" />
   <link rel="stylesheet" href="css/gallery-page.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <style>
-    #navbar{background:linear-gradient(135deg,#0d3b22,#1a5c38);padding:.75rem 0;box-shadow:0 2px 16px rgba(0,0,0,.18)}
-    .page-hero{padding:6rem 0 4.5rem;background:linear-gradient(135deg,#071c10,#0f3d25 50%,#1a5c38);position:relative;overflow:hidden}
-    .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:50px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 50'%3E%3Cpath fill='%23fdf8f0' d='M0,50 C360,0 1080,0 1440,50 L1440,50 L0,50 Z'/%3E%3C/svg%3E") center/cover no-repeat}
-    @media(min-width:768px){.page-hero{padding:7.5rem 0 5rem}}
-    .breadcrumb{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;font-family:'Poppins',sans-serif;font-size:.875rem;color:rgba(255,255,255,.65);justify-content:center;margin-bottom:1rem}
-    .breadcrumb a{color:rgba(255,255,255,.65);text-decoration:none;transition:color .2s ease}.breadcrumb a:hover{color:#f5a623}
-    .breadcrumb span{color:rgba(255,255,255,.4);font-size:.75rem}.breadcrumb .cur{color:#fff;font-weight:600}
-
-    /* Gallery filter */
-    #gallery-filter{position:sticky;top:72px;z-index:40;background:rgba(253,248,240,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(26,92,56,.08);transition:top .3s ease,box-shadow .3s ease}
-    .filter-wrap{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:.625rem;padding:.75rem 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .filter-wrap::-webkit-scrollbar{display:none}
-    .filter-btn{font-family:'Poppins',sans-serif;font-weight:600;font-size:.8125rem;padding:.45rem 1rem;border-radius:9999px;border:2px solid #e5e7eb;background:transparent;color:#6b7280;cursor:pointer;transition:all .25s ease;white-space:nowrap;flex-shrink:0}
-    .filter-btn.active,.filter-btn:hover{background:#1a5c38;color:#fff;border-color:#1a5c38;box-shadow:0 3px 12px rgba(26,92,56,.25)}
-
-    /* Masonry grid */
-    .masonry{columns:1;column-gap:1rem}
-    @media(min-width:540px){.masonry{columns:2}}
-    @media(min-width:900px){.masonry{columns:3}}
-    @media(min-width:1200px){.masonry{columns:4}}
-    .m-item{break-inside:avoid;margin-bottom:1rem;border-radius:14px;overflow:hidden;position:relative;cursor:pointer;display:block;background:#e8f5e9;transition:opacity .3s ease}
-    .m-item img{width:100%;height:auto;display:block;transition:transform .55s ease}
-    .m-overlay{position:absolute;inset:0;background:linear-gradient(160deg,rgba(26,92,56,.82) 0%,rgba(245,166,35,.55) 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;opacity:0;transition:opacity .3s ease}
-    .m-item:hover img{transform:scale(1.08)}
-    .m-item:hover .m-overlay{opacity:1}
-    .m-lbl{color:#fff;font-family:'Poppins',sans-serif;font-size:.8125rem;font-weight:600}
-
-    /* Lightbox */
-    #lightbox{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s ease;padding:.75rem}
-    #lightbox.open{opacity:1;pointer-events:all}
-    #lightbox-img{max-width:min(92vw,1100px);max-height:88vh;border-radius:14px;object-fit:contain;transition:opacity .25s ease}
-    #lightbox-close,#lightbox-prev,#lightbox-next{position:absolute;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s ease;z-index:10001}
-    #lightbox-close{top:1rem;right:1rem;width:44px;height:44px;font-size:1.1rem}
-    #lightbox-prev{top:50%;left:.625rem;transform:translateY(-50%);width:44px;height:44px}
-    #lightbox-next{top:50%;right:.625rem;transform:translateY(-50%);width:44px;height:44px}
-    #lightbox-caption{position:absolute;bottom:1rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.8);font-family:'Inter',sans-serif;font-size:.875rem;background:rgba(0,0,0,.5);padding:.4rem 1.25rem;border-radius:9999px;white-space:nowrap;max-width:88vw;overflow:hidden;text-overflow:ellipsis}
-    #lightbox-counter{position:absolute;top:1rem;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.6);font-family:'Poppins',sans-serif;font-size:.8rem;font-weight:600}
-
-    /* Owner spotlight */
-    .owner-quote-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)}
-    .oq-grid{display:grid;grid-template-columns:1fr}
-    @media(min-width:768px){.oq-grid{grid-template-columns:2fr 3fr}}
-    .oq-img{position:relative;height:280px}
-    @media(min-width:768px){.oq-img{height:auto}}
-    .oq-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
-
-    /* common */
-    .section-py{padding-top:3.5rem;padding-bottom:3.5rem}
-    @media(min-width:768px){.section-py{padding-top:5rem;padding-bottom:5rem}}
-    @media(min-width:1024px){.section-py{padding-top:6.5rem;padding-bottom:6.5rem}}
-    .bg-cream{background:#fdf8f0}
-    .container-custom{width:100%;max-width:1280px;margin:0 auto;padding:0 1.25rem}
-    @media(min-width:640px){.container-custom{padding:0 1.5rem}}
-    @media(min-width:1024px){.container-custom{padding:0 2.5rem}}
-    @media(min-width:1280px){.container-custom{padding:0 3.5rem}}
-    .sec-badge{display:inline-flex;align-items:center;gap:.375rem;background:rgba(26,92,56,.08);color:#1a5c38;font-family:'Poppins',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.35rem .875rem;border-radius:9999px;border:1px solid rgba(26,92,56,.15);margin-bottom:.875rem}
-    .sec-title{font-family:'Playfair Display',serif;font-weight:700;line-height:1.2;color:#111827}
-    .sec-divider{width:56px;height:4px;background:linear-gradient(to right,#1a5c38,#f5a623);border-radius:9999px;margin:1rem 0}
-    .sec-divider.center{margin:1rem auto}
-    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:'Poppins',sans-serif;font-weight:600;font-size:.9375rem;padding:.875rem 1.75rem;border-radius:9999px;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:all .3s ease;line-height:1.3}
-    .btn-primary{background:#1a5c38;color:#fff;border-color:#1a5c38;box-shadow:0 4px 18px rgba(26,92,56,.35)}
-    .btn-primary:hover{background:#0f3d25;transform:translateY(-2px)}
-    .btn-outline-primary{background:transparent;color:#1a5c38;border-color:#1a5c38}
-    .btn-outline-primary:hover{background:#1a5c38;color:#fff;transform:translateY(-2px)}
-    .btn-lg{padding:1rem 2.25rem;font-size:1rem}
-    .cta-section{background:linear-gradient(135deg,#d4891a,#f5a623 55%,#fde68a);position:relative;overflow:hidden}
-    .reveal{opacity:0;transition:opacity .7s ease,transform .7s ease}
-    .reveal.from-bottom{transform:translateY(44px)}.reveal.from-left{transform:translateX(-44px)}.reveal.from-right{transform:translateX(44px)}.reveal.from-scale{transform:scale(.92)}.reveal.visible{opacity:1;transform:translate(0) scale(1)}
-    .delay-100{transition-delay:.1s}.delay-200{transition-delay:.2s}.delay-300{transition-delay:.3s}
-    @keyframes fadeInUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-    .anim-fade-in-up{animation:fadeInUp .8s ease both}.anim-delay-1{animation-delay:.15s}
-    #page-loader{position:fixed;inset:0;background:#0f3d25;z-index:99999;display:flex;align-items:center;justify-content:center;transition:opacity .5s ease,visibility .5s ease}
-    #page-loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
-    .loader-text{font-family:'Playfair Display',serif;font-size:1.875rem;color:#fff;animation:loaderPulse 1.2s ease-in-out infinite}
-    .loader-dots{display:flex;justify-content:center;gap:.4rem;margin-top:.875rem}
-    .loader-dot{width:8px;height:8px;border-radius:50%;background:#f5a623;display:inline-block}
-    .loader-dot:nth-child(1){animation:bounce 1s .0s infinite}.loader-dot:nth-child(2){animation:bounce 1s .15s infinite}.loader-dot:nth-child(3){animation:bounce 1s .30s infinite}
-    @keyframes loaderPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.95)}}
-    @keyframes bounce{0%,100%{transform:translateY(-25%)}50%{transform:translateY(0)}}
-  </style>
 </head>
 <body style="overflow-x:hidden;background:#fdf8f0">
 
@@ -133,18 +51,7 @@
 </header>
 
 <!-- FILTER BAR -->
-<div id="gallery-filter" aria-label="Gallery filter">
-  <div class="container-custom">
-    <div class="filter-wrap" role="group" aria-label="Gallery category filter">
-      <button class="filter-btn active" data-filter="all" type="button">🌿 Sabhi</button>
-      <button class="filter-btn" data-filter="farm" type="button">🏡 Farm</button>
-      <button class="filter-btn" data-filter="gaay" type="button">🐄 Gaayein</button>
-      <button class="filter-btn" data-filter="doodh" type="button">🥛 Doodh</button>
-      <button class="filter-btn" data-filter="utpaad" type="button">🧀 Utpaad</button>
-      <button class="filter-btn" data-filter="team" type="button">👷 Team</button>
-    </div>
-  </div>
-</div>
+
 
 <!-- MASONRY GALLERY -->
 <section class="section-py bg-cream" aria-labelledby="gallery-section-heading">
@@ -157,6 +64,18 @@
       <div class="sec-divider center"></div>
       <p style="font-family:'Inter',sans-serif;color:#6b7280;max-width:36rem;margin:.75rem auto 0;font-size:.9375rem">Photo par click karein — badi size mein dekhein. Keyboard arrows se bhi navigate kar sakte hain.</p>
     </div>
+    <div id="gallery-filter" aria-label="Gallery filter">
+  <div class="container-custom">
+    <div class="filter-wrap" role="group" aria-label="Gallery category filter">
+      <button class="filter-btn active" data-filter="all" type="button">🌿 Sabhi</button>
+      <button class="filter-btn" data-filter="farm" type="button">🏡 Farm</button>
+      <button class="filter-btn" data-filter="gaay" type="button">🐄 Gaayein</button>
+      <button class="filter-btn" data-filter="doodh" type="button">🥛 Doodh</button>
+      <button class="filter-btn" data-filter="utpaad" type="button">🧀 Utpaad</button>
+      <button class="filter-btn" data-filter="team" type="button">👷 Team</button>
+    </div>
+  </div>
+</div>
 
     <div class="masonry" id="gallery-grid" role="list" aria-label="Farm Gallery">
 
@@ -241,7 +160,7 @@
       <div class="owner-quote-card">
         <div class="oq-grid">
           <div class="oq-img">
-            <img src="manishimage.jpeg" alt="Anil Kumar Singh — Delhuan Dairy ke Sansthapak" />
+            <img src="assets/images/Anillkumarsingh.jpeg" alt="Anil Kumar Singh — Delhuan Dairy ke Sansthapak" />
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4) 0%,transparent 60%)"></div>
           </div>
           <div style="padding:2rem 2.5rem;display:flex;flex-direction:column;justify-content:center">
@@ -253,7 +172,7 @@
               <div>
                 <div style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1rem;color:#111827">Anil Kumar Singh</div>
                 <div style="font-family:'Poppins',sans-serif;font-size:.8125rem;color:#1a5c38;font-weight:600;margin-bottom:.5rem">Sansthapak &amp; Sanchalak, Delhuan Dairy</div>
-                <img src="signaturemanish.jpeg" alt="Anil Kumar Singh ki hastakshar" style="height:32px;width:auto;opacity:.85;display:block" />
+                <img src="assets/logo/signature.png" alt="Anil Kumar Singh ki hastakshar" style="height:32px;width:auto;opacity:.85;display:block" />
               </div>
             </div>
           </div>
@@ -272,7 +191,7 @@
       <p style="font-family:'Poppins',sans-serif;font-weight:300;color:rgba(255,255,255,.92);font-size:1.0625rem;margin-bottom:2rem;line-height:1.65">Farm visit ke liye welcome hain — pehle call karke appointment le lein.</p>
       <div style="display:flex;flex-wrap:wrap;gap:.875rem;justify-content:center">
         <a href="contact.html" class="btn btn-lg" style="background:#fff;border-color:#fff;color:#d97706;font-weight:700"><i class="fas fa-calendar-check" aria-hidden="true"></i> Visit Book Karein</a>
-        <a href="https://wa.me/[WHATSAPP_NUMBER]" target="_blank" rel="noopener noreferrer" class="btn btn-lg" style="background:#25d366;border-color:#25d366;color:#fff"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Karein</a>
+        <a href="https://wa.me/917635065908" target="_blank" rel="noopener noreferrer" class="btn btn-lg" style="background:#25d366;border-color:#25d366;color:#fff"><i class="fab fa-whatsapp" aria-hidden="true"></i> WhatsApp Karein</a>
       </div>
     </div>
   </div>

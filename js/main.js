@@ -393,8 +393,63 @@ function initContactForm() {
       btn.innerHTML = orig;
       const ok = $('#form-success');
       if (ok) { ok.classList.remove('hidden'); form.reset(); setTimeout(() => ok.classList.add('hidden'), 5000); }
+      showContactSuccessModal();
     }, 1400);
   });
+}
+
+function createContactSuccessModal() {
+  if ($('#contact-success-modal')) return;
+  document.body.insertAdjacentHTML('beforeend', `
+    <div class="order-modal" id="contact-success-modal" role="dialog" aria-modal="true" aria-labelledby="contact-success-title" hidden>
+      <div class="order-modal-backdrop" data-contact-modal-close></div>
+      <div class="order-modal-card order-success-view">
+        <button type="button" class="order-modal-close" data-contact-modal-close aria-label="Band karein"><i class="fas fa-times" aria-hidden="true"></i></button>
+        <div class="order-success-icon"><i class="fas fa-check" aria-hidden="true"></i></div>
+        <h2 id="contact-success-title">Message successfully receive ho gaya!</h2>
+        <p>Aapka message humein mil gaya hai. Hamari contact team aapse jald connect karegi.</p>
+        <button type="button" class="btn btn-primary" data-contact-modal-close>Done</button>
+      </div>
+    </div>`);
+  $$('[data-contact-modal-close]', $('#contact-success-modal')).forEach(btn => on(btn, 'click', () => closeModal($('#contact-success-modal'))));
+}
+
+function showContactSuccessModal() {
+  createContactSuccessModal();
+  openModal($('#contact-success-modal'));
+}
+
+function openModal(modal) {
+  if (!modal) return;
+  modal.hidden = false;
+  document.body.classList.add('modal-open');
+  modal.querySelector('input, button:not(.order-modal-close)')?.focus();
+}
+
+function closeModal(modal) {
+  if (!modal) return;
+  modal.hidden = true;
+  document.body.classList.remove('modal-open');
+}
+
+function initOrderModal() {
+  const modal = $('#order-modal');
+  const form = $('#order-form');
+  if (!modal || !form) return;
+  $$('[data-modal-close]', modal).forEach(btn => on(btn, 'click', () => closeModal(modal)));
+  $$('[data-order-product]').forEach(btn => on(btn, 'click', () => {
+    $('#order-product').value = btn.closest('.prod-card')?.querySelector('.prod-title')?.textContent.trim() || 'Dairy product';
+    $('#order-form-view').hidden = false;
+    $('#order-success-view').hidden = true;
+    openModal(modal);
+  }));
+  on(form, 'submit', e => {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    $('#order-form-view').hidden = true;
+    $('#order-success-view').hidden = false;
+  });
+  on(document, 'keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(modal); });
 }
 
 /* ─────────────────────────────────────────
@@ -509,6 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProductFilter();
   initTestiSlider();
   initContactForm();
+  initOrderModal();
   initAccordion();
   initLazyLoad();
   initAnchorScroll();

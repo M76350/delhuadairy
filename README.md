@@ -1,7 +1,7 @@
 # 🐄 Delhuan Dairy — Website
 
 **Owner:** Anil Kumar Singh
-**Location:** Delhuan, Sitamarhi District, Bihar — 843302  
+**Location:** Delhuan Village, Chitaon Panchayat, Indour Post Office, Dinara Thana, Kochas Prakhand, Rohtas, Bihar — 802213, India  
 **Tech Stack:** HTML5 · Tailwind CSS (Offline) · Vanilla JavaScript · CSS Animations  
 
 ---
@@ -34,9 +34,8 @@ delhuandairy/
 ├── js/
 │   └── main.js           ← All JS: navbar, animations, form, lightbox, etc.
 │
-├── manishimage.jpeg    ← Owner photo (Anil Kumar Singh)
-├── signature.jpeg      ← Signature image
-├── signaturemanish.jpeg← Anil Kumar Singh signature
+├── assets/images/Anillkumarsingh.jpeg ← Owner photo (Anil Kumar Singh)
+├── assets/logo/signature.png          ← Anil Kumar Singh signature
 └── README.md           ← This file
 ```
 
