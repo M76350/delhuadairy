@@ -33,8 +33,8 @@ Write-Host "team ok"
 $wc.DownloadFile("https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1200&q=70&fm=webp","assets\images\about-farm.webp")
 Write-Host "about-farm ok"
 
-Copy-Item "manishimage.jpeg"     "assets\images\owner.jpg"     -Force
-Copy-Item "signaturemanish.jpeg" "assets\images\signature.jpg" -Force
+Copy-Item "assets\images\Anillkumarsingh.jpeg" "assets\images\owner.jpg"     -Force
+Copy-Item "assets\logo\signature.png"          "assets\images\signature.jpg" -Force
 Write-Host "owner photos copied"
 
 Write-Host "[2] Downloading fonts..."

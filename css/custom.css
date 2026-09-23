@@ -928,6 +928,26 @@ a   { text-decoration: none; color: inherit; }
 .cursor-pointer{cursor:pointer;}
 .select-none{user-select:none;-webkit-user-select:none;}
 .transition-all{transition:all .3s ease;}
+
+/* Order and contact confirmation modals */
+body.modal-open { overflow: hidden; }
+.order-modal { position: fixed; inset: 0; z-index: 100000; display: grid; place-items: center; padding: 1rem; }
+.order-modal[hidden] { display: none; }
+.order-modal-backdrop { position: absolute; inset: 0; background: rgba(7,28,16,.72); backdrop-filter: blur(4px); }
+.order-modal-card { position: relative; width: min(100%, 30rem); max-height: min(90vh, 720px); overflow-y: auto; background: #fff; border-radius: 18px; padding: 2rem; box-shadow: 0 24px 70px rgba(0,0,0,.3); }
+.order-modal-close { position: absolute; top: .75rem; right: .75rem; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #f3f4f6; color: #374151; cursor: pointer; }
+.order-modal-icon, .order-success-icon { width: 54px; height: 54px; display: grid; place-items: center; border-radius: 50%; margin: 0 auto 1rem; background: #e8f5e9; color: #1a5c38; font-size: 1.35rem; }
+.order-modal-card h2 { margin: 0 2rem .5rem; text-align: center; font-family: 'Playfair Display', serif; color: #111827; }
+.order-modal-lead, .order-success-view p { margin: 0 auto 1.25rem; max-width: 30rem; text-align: center; color: #6b7280; font-family: 'Inter', sans-serif; line-height: 1.6; font-size: .9rem; }
+.order-form { display: grid; gap: .85rem; }
+.order-form label { display: grid; gap: .35rem; color: #374151; font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 600; }
+.order-input { width: 100%; box-sizing: border-box; padding: .75rem .85rem; border: 1px solid #d1d5db; border-radius: 9px; background: #fff; color: #111827; font: 400 .9rem 'Inter', sans-serif; }
+.order-input:focus { outline: 2px solid rgba(26,92,56,.22); border-color: #1a5c38; }
+.order-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.order-submit { width: 100%; margin-top: .35rem; }
+.order-success-view { text-align: center; }
+.order-success-icon { background: #dcfce7; color: #15803d; }
+@media (max-width: 520px) { .order-modal-card { padding: 1.5rem 1rem; } .order-form-row { grid-template-columns: 1fr; } }
 .transition-colors{transition:color .15s ease,background-color .15s ease,border-color .15s ease;}
 .transition-transform{transition:transform .3s ease;}
 .group:hover .group-hover\:scale-110{transform:scale(1.1);}
