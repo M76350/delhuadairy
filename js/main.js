@@ -1,5 +1,5 @@
 /**
- * DELHUAN DAIRY — main.js  v3
+ * Delhua DAIRY — main.js  v3
  * Pure Vanilla JS — zero dependencies
  */
 'use strict';

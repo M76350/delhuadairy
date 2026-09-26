@@ -1,4 +1,4 @@
-/* Delhuan Dairy home page styles */
+/* Delhua Dairy home page styles */
 #navbar { background: transparent; }
 
 .hero-section { position: relative; min-height: 100vh; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
@@ -35,7 +35,7 @@
     }
     .hero-bg {
       position: absolute; inset: 0;
-      background: #0f3d25 url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&q=80') center/cover no-repeat;
+      background: #0f3d25 url('../assets/images/farm/cow.jpg') center/cover no-repeat;
       animation: heroZoom 14s ease-in-out infinite alternate;
       z-index: 0;
     }

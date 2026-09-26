@@ -1,4 +1,4 @@
-Set-Location "c:\Users\r\Desktop\delhuandairy"
+Set-Location "c:\Users\r\Desktop\Delhuadairy"
 $wc = New-Object System.Net.WebClient
 
 Write-Host "[1] Downloading images..."
