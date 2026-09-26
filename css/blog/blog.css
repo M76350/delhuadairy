@@ -1,4 +1,4 @@
-/* Delhuan Dairy blog pages */
+/* Delhua Dairy blog pages */
 .article-navigation { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid #e7e2d8; }
 .article-nav-button, .article-nav-home { display: inline-flex; align-items: center; gap: .5rem; min-height: 42px; padding: .65rem .9rem; border-radius: 10px; text-decoration: none; font-family: 'Poppins', sans-serif; font-size: .8rem; font-weight: 600; transition: background .2s ease, color .2s ease, transform .2s ease; }
 .article-nav-button { color: #1a5c38; background: #f0f7f1; }

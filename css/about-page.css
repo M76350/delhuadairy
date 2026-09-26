@@ -1,4 +1,4 @@
-/* Delhuan Dairy about page styles */
+/* Delhua Dairy about page styles */
 .about-two-col, .two-col { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
 .about-img-wrap { position: relative; padding: 1.5rem 1.5rem 2.75rem; }
 .about-img-main { border-radius: 20px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,.15); }

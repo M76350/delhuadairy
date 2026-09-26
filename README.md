@@ -1,7 +1,7 @@
-# 🐄 Delhuan Dairy — Website
+# 🐄 Delhua Dairy — Website
 
 **Owner:** Anil Kumar Singh
-**Location:** Delhuan Village, Chitaon Panchayat, Indour Post Office, Dinara Thana, Kochas Prakhand, Rohtas, Bihar — 802213, India  
+**Location:** Delhua Village, Chitaon Panchayat, Indour Post Office, Dinara Thana, Kochas Prakhand, Rohtas, Bihar — 802213, India  
 **Tech Stack:** HTML5 · Tailwind CSS (Offline) · Vanilla JavaScript · CSS Animations  
 
 ---
@@ -9,7 +9,7 @@
 ## 📁 Project Structure
 
 ```
-delhuandairy/
+Delhuadairy/
 │
 ├── index.html          ← Homepage
 ├── about.html          ← About Us / Anil Kumar Singh Story
@@ -77,7 +77,7 @@ Har HTML file mein ye replace karein:
 |---|---|
 | `[BUSINESS PHONE]` | Jaise: `+91 98765 43210` |
 | `[BUSINESS_PHONE]` | Same phone (href ke liye) |
-| `[BUSINESS EMAIL]` | Jaise: `manish@delhuandairy.com` |
+| `[BUSINESS EMAIL]` | Jaise: `manish@Delhuadairy.com` |
 | `[WHATSAPP_NUMBER]` | Country code sahit, jaise: `919876543210` |
 
 **Find & Replace** karne ka aasaan tarika:
@@ -109,13 +109,13 @@ Example: `https://wa.me/919876543210` (India ke liye 91 prefix)
 Footer mein `href="#"` wale social links replace karein:
 ```html
 <!-- Facebook -->
-<a href="https://facebook.com/delhuandairy" ...>
+<a href="https://facebook.com/Delhuadairy" ...>
 
 <!-- Instagram -->
-<a href="https://instagram.com/delhuandairy" ...>
+<a href="https://instagram.com/Delhuadairy" ...>
 
 <!-- YouTube -->
-<a href="https://youtube.com/@delhuandairy" ...>
+<a href="https://youtube.com/@Delhuadairy" ...>
 ```
 
 ---
@@ -232,7 +232,7 @@ Website Google Fonts use karti hai. Offline use ke liye:
 ### Netlify (Recommended — Free):
 1. [netlify.com](https://netlify.com) par account banayein
 2. "Add new site" → "Deploy manually"
-3. Poora `delhuandairy` folder drag & drop karein
+3. Poora `Delhuadairy` folder drag & drop karein
 4. Deploy! Custom domain bhi free mein set ho jaata hai.
 
 ### GitHub Pages (Free):
@@ -250,5 +250,5 @@ Koi issue ho toh:
 
 ---
 
-*Delhuan Dairy — Taaza Doodh, Shuddh Jeewan* 🥛  
+*Delhua Dairy — Taaza Doodh, Shuddh Jeewan* 🥛  
 *Anil Kumar Singh — Sansthapak*

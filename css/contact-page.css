@@ -1,4 +1,4 @@
-/* Delhuan Dairy contact page styles */
+/* Delhua Dairy contact page styles */
 .contact-wrap { display: grid; grid-template-columns: 1fr; background: var(--c-cream); }
 .contact-info-panel { background: linear-gradient(160deg,#071c10 0%,#0f3d25 55%,#1a5c38 100%); position: relative; overflow: hidden; padding: 3rem 1.75rem 3.5rem; }
 .contact-info-panel::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 10% 90%,rgba(245,166,35,.1),transparent 55%), radial-gradient(ellipse 50% 40% at 90% 10%,rgba(255,255,255,.05),transparent 50%); pointer-events: none; }

@@ -1,5 +1,5 @@
 /**
- * DELHUAN DAIRY — components.js
+ * Delhua DAIRY — components.js
  * Navbar + Footer ko dynamically inject karta hai sabhi pages mein.
  * Isse har page pe same navbar/footer guaranteed rahega.
  */
@@ -48,10 +48,10 @@
   <div class="nav-inner">
 
     <!-- Logo -->
-    <a href="index.html" class="nav-logo" aria-label="Delhuan Dairy Home">
+    <a href="index.html" class="nav-logo" aria-label="Delhua Dairy Home">
       <div class="nav-logo-icon" aria-hidden="true">🐄</div>
       <div>
-        <div class="nav-logo-name">Delhuan Dairy</div>
+        <div class="nav-logo-name">Delhua Dairy</div>
         <div class="nav-logo-sub">Pure &amp; Fresh</div>
       </div>
     </a>
@@ -107,18 +107,18 @@
 
         <!-- Brand -->
         <div class="footer-brand">
-          <a href="index.html" class="footer-logo-link" aria-label="Delhuan Dairy Home">
+          <a href="index.html" class="footer-logo-link" aria-label="Delhua Dairy Home">
             <div class="footer-logo-icon">
-              <img src="assets/logo/Delhua-dairy-logo-image.webp" alt="Delhuan Dairy logo" />
+              <img src="assets/logo/Delhua-dairy-logo-image.webp" alt="Delhua Dairy logo" />
             </div>
             <div>
-              <div class="footer-logo-name">Delhuan Dairy</div>
+              <div class="footer-logo-name">Delhua Dairy</div>
               <div class="footer-logo-sub">Pure &amp; Fresh</div>
             </div>
           </a>
           <p class="footer-tagline">
             Taaza aur shuddh dairy utpaad seedha farm se aapke ghar tak.
-            Anil Kumar Singh dwara sanchalit, Delhuan Village, Rohtas, Bihar.
+            Anil Kumar Singh dwara sanchalit, Delhua Village, Rohtas, Bihar.
           </p>
           <div class="footer-signature-wrap">
             <img src="signaturemanish.jpeg" alt="Anil Kumar Singh ki hastakshar" class="footer-signature" />
@@ -132,8 +132,8 @@
           <ul class="footer-links-list">${quickLinks}</ul>
           <h3 class="footer-heading" style="margin-top:1.5rem">Hamare Other Links</h3>
           <ul class="footer-links-list">
-            <li><a href="https://delhuan-dairy.netlify.app/" target="_blank" rel="noopener" class="footer-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Delhuan Dairy (Old Site)</a></li>
-            <li><a href="https://delhuan-village-tour.vercel.app/" target="_blank" rel="noopener" class="footer-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Delhuan Village Tour</a></li>
+            <li><a href="https://Delhua-dairy.netlify.app/" target="_blank" rel="noopener" class="footer-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Delhua Dairy (Old Site)</a></li>
+            <li><a href="https://Delhua-village-tour.vercel.app/" target="_blank" rel="noopener" class="footer-link"><i class="fas fa-external-link-alt" aria-hidden="true"></i>Delhua Village Tour</a></li>
           </ul>
         </div>
 
@@ -156,7 +156,7 @@
           <div class="footer-contact-list">
             <div class="footer-contact-row">
               <div class="footer-contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
-              <span class="footer-contact-text">Delhuan Dairy Farm<br>Delhuan Village, Chitaon Panchayat<br>Indour Post Office, Dinara Thana<br>Kochas Prakhand, Rohtas, Bihar — 802213, India</span>
+              <span class="footer-contact-text">Delhua Dairy Farm<br>Delhua Village, Chitaon Panchayat<br>Indour Post Office, Dinara Thana<br>Kochas Prakhand, Rohtas, Bihar — 802213, India</span>
             </div>
             <div class="footer-contact-row">
               <div class="footer-contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
@@ -168,7 +168,7 @@
             </div>
             <div class="footer-contact-row">
               <div class="footer-contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
-              <a href="mailto:delhuandairy@gmail.com" class="footer-contact-text footer-tel">delhuandairy@gmail.com</a>
+              <a href="mailto:Delhuadairy@gmail.com" class="footer-contact-text footer-tel">Delhuadairy@gmail.com</a>
             </div>
             <div class="footer-contact-row">
               <div class="footer-contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
@@ -191,7 +191,7 @@
   <div class="footer-bottom">
     <div class="container-custom">
       <div class="footer-bottom-inner">
-        <span>© 2024 Delhuan Dairy. Sabhee adhikaar surakshit. Anil Kumar Singh dwara sanchalit.</span>
+        <span>© 2024 Delhua Dairy. Sabhee adhikaar surakshit. Anil Kumar Singh dwara sanchalit.</span>
         <div class="footer-bottom-links">
           <a href="privacy-policy.html">Privacy Policy</a>
           <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
